@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+.tabs button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    position: relative;
+}
+
+.tabcontent h3 {
+    margin-top: 0;
+}
+
+/* Scroll in from the left or right */
+.from-left {
+    transform: translateX(-100%);
+}
+
+.from-right {
+    transform: translateX(100%);
+}
+
+.active-tab {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
